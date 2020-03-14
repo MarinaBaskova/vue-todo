@@ -1,16 +1,19 @@
 <template>
   <div id="app">
+    <Header />
     <!--use v-bind directive to pass todos data as props -->
     <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
   </div>
 </template>
 
 <script>
+import Header from "./components/layout/Header";
 import Todos from "./components/Todos";
 
 export default {
   name: "App",
   components: {
+    Header,
     Todos
   },
 
