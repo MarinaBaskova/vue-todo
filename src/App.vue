@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <Todos />
+    <!--use v-bind directive to pass todos data as props -->
+    <Todos v-bind:todos="todos" />
   </div>
 </template>
 
