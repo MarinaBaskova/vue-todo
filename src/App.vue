@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!--use v-bind directive to pass todos data as props -->
-    <Todos v-bind:todos="todos" />
+    <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
   </div>
 </template>
 
@@ -13,6 +13,7 @@ export default {
   components: {
     Todos
   },
+
   data() {
     return {
       todos: [
@@ -33,6 +34,12 @@ export default {
         }
       ]
     };
+  },
+
+  methods: {
+    deleteTodo(id) {
+      this.todos = this.todos.filter(todo => todo.id !== id);
+    }
   }
 };
 </script>
