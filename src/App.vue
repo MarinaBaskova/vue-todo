@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header />
+    <AddTodo />
     <!--use v-bind directive to pass todos data as props -->
     <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
   </div>
@@ -9,12 +10,14 @@
 <script>
 import Header from "./components/layout/Header";
 import Todos from "./components/Todos";
+import AddTodo from "./components/AddTodo";
 
 export default {
   name: "App",
   components: {
     Header,
-    Todos
+    Todos,
+    AddTodo
   },
 
   data() {
@@ -57,5 +60,18 @@ export default {
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.4;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: #e3eaa7;
+  color: black;
+  padding: 7px 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #c1946a;
 }
 </style>
