@@ -1,8 +1,8 @@
 <template>
-  <div class="todo-item" v-bind:class="{'is-complete':todo.completed}">
+  <div class="todo-item" v-bind:class="{ 'is-complete': todo.completed }">
     <p>
       <input type="checkbox" v-on:change="markComplete" />
-      {{todo.title}}
+      {{ todo.title }}
       <!--add click event and use $emit to send custom event from child to parent. Custom events can be used to notify the parent component about changes-->
       <button @click="$emit('del-todo', todo.id)" class="del">X</button>
     </p>
@@ -26,6 +26,8 @@ export default {
   background: lightblue;
   padding: 10px;
   border-bottom: 1px #ccc dotted;
+  text-align: left;
+  font-size: large;
 }
 
 .is-complete {

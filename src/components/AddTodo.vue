@@ -17,10 +17,10 @@
 
 <script>
 export default {
-  name: 'AddTodo',
+  name: "AddTodo",
   data() {
     return {
-      title: ''
+      title: ""
     };
   },
   methods: {
@@ -31,9 +31,9 @@ export default {
         completed: false
       };
       // 2. send up to the parent
-      this.$emit('add-todo', newTodo);
+      this.$emit("add-todo", newTodo);
       //3. clear input after todo is submitted
-      this.title = '';
+      this.title = "";
     }
   }
 };
@@ -44,16 +44,18 @@ form {
   display: flex;
 }
 
-input[type='text'] {
+input[type="text"] {
   -ms-flex: 10; /* IE 10 */
   flex: 10;
   padding: 5px;
   outline: none;
+  font-size: large;
 }
 
-input[type='submit'] {
+input[type="submit"] {
   -ms-flex: 2; /* IE 10 */
   flex: 2;
   outline: none;
+  font-size: large;
 }
 </style>

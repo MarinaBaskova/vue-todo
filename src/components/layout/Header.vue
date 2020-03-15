@@ -1,6 +1,10 @@
 <template>
   <header class="header">
     <h1>Todolist App</h1>
+    <div id="nav">
+      <router-link to="/">Home</router-link>|
+      <router-link to="/about">About</router-link>
+    </div>
   </header>
 </template>
 
@@ -11,6 +15,10 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  font-size: 2rem;
+}
+
 .header {
   background: #b1cbbb;
   color: black;
@@ -21,5 +29,9 @@ export default {
 .header a {
   color: black;
   padding-right: 5px;
+  text-decoration: none;
+}
+#nav {
+  font-size: large;
 }
 </style>
