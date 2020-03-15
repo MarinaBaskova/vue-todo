@@ -1,5 +1,7 @@
 # vue-todo
 
+Simple todolist app to learn Vue
+
 ## Project setup
 ```
 yarn install
